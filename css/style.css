@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#appHeader {
+  text-align: center;
+  color: #6b705c;
+  font-weight: bolder;
+}
+
+.wrapper {
+  font-size: 15px;
+  background: #457b9d;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  border: 2px solid #457b9d;
+  border-radius: 5px;
+}
+
+.wrapper .cardContainer {
+  background-color: #f1faee;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid #f1faee;
+  border-radius: 5px;
+}
+
+.wrapper .cardContainer .posts {
+  background-color: #457b9d;
+  height: 262px;
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  border: 1px solid #f1faee;
+  border-radius: 5px;
+}
+.wrapper .cardContainer .posts .postCard {
+  width: 270px;
+  text-align: center;
+  border: 2px solid #457b9d;
+  background-color: #f1faee;
+  margin-right: 20px;
+}
+
+.wrapper .cardContainer .posts .postCard .post-title {
+  margin: 0;
+}
+.wrapper .cardContainer .posts .postCard .post-content {
+  margin: 5px;
+}
+.button-container {
+  width: 240px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#getPostBtn {
+  background-color: #f1faee;
+  color: #6b705c;
+  border: 2px solid #f1faee;
+  border-radius: 5px;
+  border-color: #457b9d;
+  padding: 10px;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+#getPostBtn:hover {
+  background: #457b9d;
+  color: #f1faee;
+  transform: scale(1.05);
+}
+
+#hideBtn {
+  background-color: #f1faee;
+  color: #6b705c;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: #457b9d;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+#hideBtn:hover {
+  color: #f1faee;
+  background: #118ab2;
+  transform: scale(1.05);
+}
+@media screen and (max-width: 1020px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
